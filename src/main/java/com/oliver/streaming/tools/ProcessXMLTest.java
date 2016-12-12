@@ -94,8 +94,8 @@ public class ProcessXMLTest {
 		    	  Element pubDateline =  (Element) pubDate.item(0);
 		    	  prop.pubDate = getCharacterDataFromElement(pubDateline);
 		    	  
-		    	  NodeList thumbnail = element.getElementsByTagName("thumbnail");
-		    	  Element thumbnailline =  (Element) link.item(0);
+		    	  NodeList thumbnail = element.getElementsByTagName("media:thumbnail");
+		    	  Element thumbnailline =  (Element) thumbnail.item(0);
 		    	  prop.thumbnail = getCharacterDataFromElement(thumbnailline);
 		    	  
 		    	  properties.add(prop);

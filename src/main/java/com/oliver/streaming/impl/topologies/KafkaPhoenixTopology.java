@@ -1,19 +1,18 @@
 package com.oliver.streaming.impl.topologies;
 
 import org.apache.log4j.Logger;
-
-import com.oliver.streaming.impl.bolts.RouteBolt;
-import com.oliver.streaming.impl.bolts.SubmitBolt;
-
 import org.apache.storm.Config;
 import org.apache.storm.StormSubmitter;
-import org.apache.storm.spout.SchemeAsMultiScheme;
-import org.apache.storm.topology.TopologyBuilder;
 import org.apache.storm.kafka.BrokerHosts;
 import org.apache.storm.kafka.KafkaSpout;
 import org.apache.storm.kafka.SpoutConfig;
 import org.apache.storm.kafka.StringScheme;
 import org.apache.storm.kafka.ZkHosts;
+import org.apache.storm.spout.SchemeAsMultiScheme;
+import org.apache.storm.topology.TopologyBuilder;
+
+import com.oliver.streaming.impl.bolts.InsertBolt;
+import com.oliver.streaming.impl.bolts.RouteBolt;
 
 public class KafkaPhoenixTopology extends BaseKafkaPhoenixTopology{
 	private static final Logger LOG = Logger.getLogger(KafkaPhoenixTopology.class);
@@ -44,9 +43,10 @@ public class KafkaPhoenixTopology extends BaseKafkaPhoenixTopology{
          
          configureKafkaSpout(builder);
          configureRouteBolt(builder);
+         configureInsertBolt(builder);
          
-         builder.setBolt("submitter", new SubmitBolt())
-            .shuffleGrouping(ROUTE_BOLT);
+         //builder.setBolt("submitter", new SubmitBolt())
+         //   .shuffleGrouping(ROUTE_BOLT);
          
          try {
              StormSubmitter.submitTopology("realestate-topology", config, builder.createTopology());
@@ -92,6 +92,12 @@ public class KafkaPhoenixTopology extends BaseKafkaPhoenixTopology{
         RouteBolt routeBolt = new RouteBolt(true);
         //Defines new bolt in topology
         builder.setBolt(ROUTE_BOLT, routeBolt, 2).shuffleGrouping("kafkaSpout");
+    }
+    
+    public void configureInsertBolt(TopologyBuilder builder) {
+        InsertBolt insertBolt = new InsertBolt();
+        //Defines new bolt in topology
+        builder.setBolt("InsertBolt", insertBolt, 2).shuffleGrouping(ROUTE_BOLT);
     }
 
 
