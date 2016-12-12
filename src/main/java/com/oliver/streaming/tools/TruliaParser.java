@@ -1,4 +1,4 @@
-package com.oliver.streaming.impl.bolts;
+package com.oliver.streaming.tools;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -8,26 +8,18 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-/*
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-*/
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.w3c.dom.CharacterData;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
-import org.w3c.dom.CharacterData;
-
-
-public class ProcessXMLTest {
-
+public class TruliaParser {
 	public static void main(String[] str) {
 		String url = "https://www.trulia.com/rss2/for_sale/San_Francisco,CA/";
 		String output = null;

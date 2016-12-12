@@ -24,6 +24,10 @@ public class RouteBolt extends BaseRichBolt{
 	public void execute(Tuple input) {
 		LOG.info("About to process tuple[" + input + "]");
 		
+		// Process tuple by splitting into individual rows
+		String rssfeed = input.getString(0);
+		// LOG.info(rssfeed);
+		/*
 	      String sentence = input.getString(0);
 	      String[] words = sentence.split(" ");
 	      
@@ -36,6 +40,7 @@ public class RouteBolt extends BaseRichBolt{
 	         }
 	         
 	      }
+	      */
 	      
 	      outputCollector.ack(input);
         

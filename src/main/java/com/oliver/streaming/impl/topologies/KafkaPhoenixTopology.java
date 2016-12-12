@@ -49,7 +49,7 @@ public class KafkaPhoenixTopology extends BaseKafkaPhoenixTopology{
             .shuffleGrouping(ROUTE_BOLT);
          
          try {
-             StormSubmitter.submitTopology("simple-topology", config, builder.createTopology());
+             StormSubmitter.submitTopology("realestate-topology", config, builder.createTopology());
          } catch (Exception e) {
              LOG.error("Error submiting Topology", e);
          }
@@ -77,12 +77,8 @@ public class KafkaPhoenixTopology extends BaseKafkaPhoenixTopology{
     private SpoutConfig constructKafkaSpoutConf() {
         // BrokerHosts hosts = new ZkHosts(topologyConfig.getProperty("kafka.zookeeper.host.port"));
         BrokerHosts hosts = new ZkHosts("localhost:2181");
-        /*
-        String topic = topologyConfig.getProperty("kafka.topic");
-        String zkRoot = topologyConfig.getProperty("kafka.zkRoot");
-        String consumerGroupId = topologyConfig.getProperty("kafka.consumer.group.id");
-        */
-        String topic = "addresses";
+
+        String topic = "properties";
         String zkRoot = "";
         String consumerGroupId = "group1";
 

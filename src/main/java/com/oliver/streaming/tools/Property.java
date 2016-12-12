@@ -1,4 +1,4 @@
-package com.oliver.streaming.impl.bolts;
+package com.oliver.streaming.tools;
 
 public class Property {
 	String title;
