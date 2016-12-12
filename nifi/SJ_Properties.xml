@@ -1,0 +1,793 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description></description>
+  <groupId>cbad385b-0158-1000-bd8d-189eebc97278</groupId>
+  <name>SJ_Properties</name>
+  <snippet>
+    <connections>
+      <id>d2b7d24e-0158-1000-0000-000000000000</id>
+      <parentGroupId>cbad385b-0158-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>cbad385b-0158-1000-0000-000000000000</groupId>
+        <id>d273c771-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>cbad385b-0158-1000-0000-000000000000</groupId>
+        <id>d2736457-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>d2b7e2bb-0158-1000-0000-000000000000</id>
+      <parentGroupId>cbad385b-0158-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>cbad385b-0158-1000-0000-000000000000</groupId>
+        <id>d273c771-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>cbad385b-0158-1000-0000-000000000000</groupId>
+        <id>d2b74a71-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>d2b7f571-0158-1000-0000-000000000000</id>
+      <parentGroupId>cbad385b-0158-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>cbad385b-0158-1000-0000-000000000000</groupId>
+        <id>d273c771-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>cbad385b-0158-1000-0000-000000000000</groupId>
+        <id>d2b7928d-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <controllerServices>
+      <id>f04b68cd-0158-1000-0000-000000000000</id>
+      <parentGroupId>cbad385b-0158-1000-0000-000000000000</parentGroupId>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Keystore Filename</key>
+          <value>
+            <name>Keystore Filename</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Keystore Password</key>
+          <value>
+            <name>Keystore Password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>key-password</key>
+          <value>
+            <name>key-password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Keystore Type</key>
+          <value>
+            <name>Keystore Type</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Truststore Filename</key>
+          <value>
+            <name>Truststore Filename</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Truststore Password</key>
+          <value>
+            <name>Truststore Password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Truststore Type</key>
+          <value>
+            <name>Truststore Type</name>
+          </value>
+        </entry>
+        <entry>
+          <key>SSL Protocol</key>
+          <value>
+            <name>SSL Protocol</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>StandardSSLContextService</name>
+      <properties>
+        <entry>
+          <key>Keystore Filename</key>
+        </entry>
+        <entry>
+          <key>Keystore Password</key>
+        </entry>
+        <entry>
+          <key>key-password</key>
+        </entry>
+        <entry>
+          <key>Keystore Type</key>
+        </entry>
+        <entry>
+          <key>Truststore Filename</key>
+          <value>/usr/jdk64/jdk1.8.0_77/jre/lib/security/cacerts</value>
+        </entry>
+        <entry>
+          <key>Truststore Password</key>
+        </entry>
+        <entry>
+          <key>Truststore Type</key>
+          <value>JKS</value>
+        </entry>
+        <entry>
+          <key>SSL Protocol</key>
+        </entry>
+      </properties>
+      <state>DISABLED</state>
+      <type>org.apache.nifi.ssl.StandardSSLContextService</type>
+    </controllerServices>
+    <processors>
+      <id>d2736457-0158-1000-0000-000000000000</id>
+      <parentGroupId>cbad385b-0158-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>URL</key>
+            <value>
+              <name>URL</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Filename</key>
+            <value>
+              <name>Filename</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>
+              <name>Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>
+              <name>Connection Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>
+              <name>Data Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+            <value>
+              <name>User Agent</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Accept Content-Type</key>
+            <value>
+              <name>Accept Content-Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Follow Redirects</key>
+            <value>
+              <name>Follow Redirects</name>
+            </value>
+          </entry>
+          <entry>
+            <key>redirect-cookie-policy</key>
+            <value>
+              <name>redirect-cookie-policy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+            <value>
+              <name>Proxy Host</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+            <value>
+              <name>Proxy Port</name>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>URL</key>
+            <value>https://www.trulia.com/rss2/for_sale/San_Jose,CA/SINGLE-FAMILY_HOME_type/</value>
+          </entry>
+          <entry>
+            <key>Filename</key>
+            <value>SJ_SFH</value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>f04b68cd-0158-1000-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>Username</key>
+          </entry>
+          <entry>
+            <key>Password</key>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+          </entry>
+          <entry>
+            <key>Accept Content-Type</key>
+          </entry>
+          <entry>
+            <key>Follow Redirects</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>redirect-cookie-policy</key>
+            <value>default</value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>43200 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GetHTTP</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.GetHTTP</type>
+    </processors>
+    <processors>
+      <id>d273c771-0158-1000-0000-000000000000</id>
+      <parentGroupId>cbad385b-0158-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>387.5283461958139</x>
+        <y>319.26417309790696</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Known Brokers</key>
+            <value>
+              <name>Known Brokers</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Topic Name</key>
+            <value>
+              <name>Topic Name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Partition Strategy</key>
+            <value>
+              <name>Partition Strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Partition</key>
+            <value>
+              <name>Partition</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Kafka Key</key>
+            <value>
+              <name>Kafka Key</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Delivery Guarantee</key>
+            <value>
+              <name>Delivery Guarantee</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Message Delimiter</key>
+            <value>
+              <name>Message Delimiter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Buffer Size</key>
+            <value>
+              <name>Max Buffer Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Record Size</key>
+            <value>
+              <name>Max Record Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Communications Timeout</key>
+            <value>
+              <name>Communications Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Async Batch Size</key>
+            <value>
+              <name>Async Batch Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Queue Buffering Max Time</key>
+            <value>
+              <name>Queue Buffering Max Time</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Compression Codec</key>
+            <value>
+              <name>Compression Codec</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Client Name</key>
+            <value>
+              <name>Client Name</name>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Known Brokers</key>
+            <value>centos0.oliversanalytics:6667</value>
+          </entry>
+          <entry>
+            <key>Topic Name</key>
+            <value>properties</value>
+          </entry>
+          <entry>
+            <key>Partition Strategy</key>
+            <value>Round Robin</value>
+          </entry>
+          <entry>
+            <key>Partition</key>
+          </entry>
+          <entry>
+            <key>Kafka Key</key>
+          </entry>
+          <entry>
+            <key>Delivery Guarantee</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Message Delimiter</key>
+          </entry>
+          <entry>
+            <key>Max Buffer Size</key>
+            <value>5 MB</value>
+          </entry>
+          <entry>
+            <key>Max Record Size</key>
+            <value>1 MB</value>
+          </entry>
+          <entry>
+            <key>Communications Timeout</key>
+            <value>30 secs</value>
+          </entry>
+          <entry>
+            <key>Async Batch Size</key>
+            <value>16384</value>
+          </entry>
+          <entry>
+            <key>Queue Buffering Max Time</key>
+          </entry>
+          <entry>
+            <key>Compression Codec</key>
+            <value>none</value>
+          </entry>
+          <entry>
+            <key>Client Name</key>
+            <value>RealEstate-Streaming</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PutKafka</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.kafka.PutKafka</type>
+    </processors>
+    <processors>
+      <id>d2b74a71-0158-1000-0000-000000000000</id>
+      <parentGroupId>cbad385b-0158-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>378.5283461958139</x>
+        <y>1.264173097906962</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>URL</key>
+            <value>
+              <name>URL</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Filename</key>
+            <value>
+              <name>Filename</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>
+              <name>Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>
+              <name>Connection Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>
+              <name>Data Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+            <value>
+              <name>User Agent</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Accept Content-Type</key>
+            <value>
+              <name>Accept Content-Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Follow Redirects</key>
+            <value>
+              <name>Follow Redirects</name>
+            </value>
+          </entry>
+          <entry>
+            <key>redirect-cookie-policy</key>
+            <value>
+              <name>redirect-cookie-policy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+            <value>
+              <name>Proxy Host</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+            <value>
+              <name>Proxy Port</name>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>URL</key>
+            <value>https://www.trulia.com/rss2/for_sale/San_Jose,CA/condo_type/</value>
+          </entry>
+          <entry>
+            <key>Filename</key>
+            <value>SJ_CONDO</value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>f04b68cd-0158-1000-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>Username</key>
+          </entry>
+          <entry>
+            <key>Password</key>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+          </entry>
+          <entry>
+            <key>Accept Content-Type</key>
+          </entry>
+          <entry>
+            <key>Follow Redirects</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>redirect-cookie-policy</key>
+            <value>default</value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>43200 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GetHTTP</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.GetHTTP</type>
+    </processors>
+    <processors>
+      <id>d2b7928d-0158-1000-0000-000000000000</id>
+      <parentGroupId>cbad385b-0158-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>766.522001756548</x>
+        <y>5.965622848094171</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>URL</key>
+            <value>
+              <name>URL</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Filename</key>
+            <value>
+              <name>Filename</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>
+              <name>Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>
+              <name>Connection Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>
+              <name>Data Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+            <value>
+              <name>User Agent</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Accept Content-Type</key>
+            <value>
+              <name>Accept Content-Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Follow Redirects</key>
+            <value>
+              <name>Follow Redirects</name>
+            </value>
+          </entry>
+          <entry>
+            <key>redirect-cookie-policy</key>
+            <value>
+              <name>redirect-cookie-policy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+            <value>
+              <name>Proxy Host</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+            <value>
+              <name>Proxy Port</name>
+            </value>
+          </entry>
+        </descriptors>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>URL</key>
+            <value>https://www.trulia.com/rss2/for_sale/San_Jose,CA/townhouse_type/</value>
+          </entry>
+          <entry>
+            <key>Filename</key>
+            <value>SJ_TH</value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>f04b68cd-0158-1000-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>Username</key>
+          </entry>
+          <entry>
+            <key>Password</key>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+          </entry>
+          <entry>
+            <key>Accept Content-Type</key>
+          </entry>
+          <entry>
+            <key>Follow Redirects</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>redirect-cookie-policy</key>
+            <value>default</value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>43200 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GetHTTP</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.GetHTTP</type>
+    </processors>
+  </snippet>
+  <timestamp>12/11/2016 16:36:59 PST</timestamp>
+</template>
