@@ -52,6 +52,8 @@ public class TruliaParser {
 	    	  NodeList thumbnail = element.getElementsByTagName("media:thumbnail");
 	    	  Element thumbnailline =  (Element) thumbnail.item(0);
 	    	  prop.thumbnail = getCharacterDataFromElement(thumbnailline);
+	    	  processPropertyType(prop.description, prop);
+	    	  processPrice(prop.getTitle(), prop);
 	    	  
 	    	  properties.add(prop);
 	      	}
@@ -75,5 +77,41 @@ public class TruliaParser {
 		      return cd.getData();
 		    }
 		    return "";
+	  }
+	  public void processPropertyType(String description, Property prop) {
+		  if(description.contains("condo")) {
+			  prop.setType("condo");
+		  }
+		  else if(description.contains("townhouse")) {
+			  prop.setType("townhouse");
+			  
+		  }
+		  else if(description.contains("single-family")) {
+			  prop.setType("single-family home");
+		  }
+		  else if(description.contains("multi-family")) {
+			  prop.setType("multi-family home");
+		  }
+		  else if(description.contains("Vacant lot")) {
+			  prop.setType("vacant lot");
+		  }
+		  else {
+			  prop.setType("");
+		  }
+	  }
+	  
+	  public void processPrice(String title, Property prop) {
+		  String[] words = title.split(" ");
+		  String price = null;
+		  for(String str : words) {
+			  if(str.contains("$")) {
+				  price = str;
+				  break;
+			  }
+		  }
+		  price = price.replace("$", "");
+		  price = price.replaceAll(",", "");
+		  
+		  prop.setPrice(new Integer(price));
 	  }
 }

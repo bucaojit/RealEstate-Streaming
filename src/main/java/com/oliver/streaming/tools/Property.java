@@ -6,6 +6,21 @@ public class Property {
 	String description;
 	String pubDate;
 	String thumbnail;
+	String type;
+	Integer price;
+	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public Integer getPrice() {
+		return price;
+	}
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
 	@Override
 	public String toString() {
 		return title + " " + link + " " +pubDate;

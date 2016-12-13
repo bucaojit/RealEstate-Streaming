@@ -97,7 +97,9 @@ public class ProcessXMLTest {
 		    	  NodeList thumbnail = element.getElementsByTagName("media:thumbnail");
 		    	  Element thumbnailline =  (Element) thumbnail.item(0);
 		    	  prop.thumbnail = getCharacterDataFromElement(thumbnailline);
-		    	  
+		    	  TruliaParser tp = new TruliaParser();
+		    	  tp.processPropertyType(prop.description, prop);
+		    	  tp.processPrice(prop.getTitle(), prop);
 		    	  properties.add(prop);
 		      }
 	      }
@@ -106,7 +108,8 @@ public class ProcessXMLTest {
 	      }
 	      
 	      for(Property prop : properties) {
-	    	  System.out.println(prop.title + " " + prop.pubDate);
+	    	  System.out.println(prop.title + " " + prop.pubDate );
+	    	  System.out.println(prop.price + " " + prop.type);
 	      }
 	      
 	}
