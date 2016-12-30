@@ -2,7 +2,7 @@ Commands to run sparkreader example:
 
 Generate some words to count:
 
-/usr/hdp/current/kafka-broker/bin/kafka-console-producer.sh --broker-list myhdp.oliversanalytics:6667 --topic wordcount
+/usr/hdp/current/kafka-broker/bin/kafka-console-producer.sh --broker-list localhost:6667 --topic wordcount
 Enter Words to count.
 
 
