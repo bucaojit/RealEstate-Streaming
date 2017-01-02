@@ -10,12 +10,12 @@ Import template, setup and enable StandardSSLContextService
 
 ######Kafka
 Create PROPERTIES topic:
-./kafka-topics.sh --zookeeper localhost:2181 --create --partitions 1 --topic properties --replication-factor 1
+~~~~./kafka-topics.sh --zookeeper localhost:2181 --create --partitions 1 --topic properties --replication-factor 1~~~~
 
 ######Storm
-Build storm job with Maven: mvn clean package -DskipTests
+Build storm job with Maven: ~~~~mvn clean package -DskipTests~~~~
 Upload Storm job:
-$ storm jar target/realestate-streaming-1.0-SNAPSHOT.jar com.oliver.streaming.impl.topologies.KafkaPhoenixTopology  <any file>
+$ ~~~~storm jar target/realestate-streaming-1.0-SNAPSHOT.jar com.oliver.streaming.impl.topologies.KafkaPhoenixTopology~~~~
 
 ######Phoenix
 Make sure Phoenix is enabled in HBase configuration
@@ -24,5 +24,5 @@ Make sure Phoenix is enabled in HBase configuration
 Import notebook.
 Basic select queries for now:
 %jdbc(phoenix)
-select title, description from PROPERTIES limit 10
+~~~~select title, description from PROPERTIES limit 10~~~~
 
