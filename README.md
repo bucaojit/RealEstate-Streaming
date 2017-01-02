@@ -1,5 +1,5 @@
 ### RealEstate-Streaming
-Pull data from trulia using Nifi and insert into Phoenix -- Components: Nifi, Kafka, Storm, Phoenix
+Stream data from Trulia api using Nifi and insert into Phoenix -- Components: Nifi, Kafka, Storm, Phoenix, Zeppelin
 
 Trulia (data source) -> Nifi -> Kafka -> Storm -> Phoenix -> Zeppelin (UI)
 
