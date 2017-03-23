@@ -3,26 +3,26 @@ Stream data from Trulia api using Nifi and insert into Phoenix -- Components: Ni
 
 Trulia (data source) -> Nifi -> Kafka -> Storm -> Phoenix -> Zeppelin (UI)
 
-#####Setup
+##### Setup
 
-######Nifi 
+###### Nifi 
 Import template, setup and enable StandardSSLContextService
 
-######Kafka
+###### Kafka
 Create PROPERTIES topic:
 ```
 ./kafka-topics.sh --zookeeper localhost:2181 --create --partitions 1 --topic properties --replication-factor 1
 ```
-######Storm
+###### Storm
 Build storm job with Maven: mvn clean package -DskipTests
 Upload Storm job:
 ```
 $ storm jar target/realestate-streaming-1.0-SNAPSHOT.jar com.oliver.streaming.impl.topologies.KafkaPhoenixTopology
 ```
-######Phoenix
+###### Phoenix
 Make sure Phoenix is enabled in HBase configuration
 
-######Zeppelin
+###### Zeppelin
 Import notebook.
 Basic select queries for now:
 %jdbc(phoenix)
