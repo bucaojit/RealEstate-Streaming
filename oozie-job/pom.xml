@@ -1,0 +1,165 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.dataeng</groupId>
+  <artifactId>realestate-details-job</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>realestate-details-job</name>
+  <url>http://maven.apache.org</url>
+
+    <properties>
+
+        <storm.version>1.0.1.2.5.1.0-58</storm.version>
+        <storm.kafka.version>1.0.1.2.5.1.0-58</storm.kafka.version>
+        <storm.hdfs.version>1.0.1.2.5.1.0-58</storm.hdfs.version>
+        <kafka.version>0.10.0.2.5.1.0-58</kafka.version>
+        <hbase.version>1.1.2.2.5.1.0-58</hbase.version>
+        <hive.version>2.1.0.2.5.1.0-58</hive.version>
+        <hadoop.version>2.7.3.2.5.1.0-58</hadoop.version>
+        <spark.version>1.6.0</spark.version>
+        <phoenix.version>4.7.0.2.5.1.0-58</phoenix.version>
+        <jpmml.version>1.0.22</jpmml.version>
+        <active.mq.version>5.7.0</active.mq.version>
+        <truck.topology.domain.version>1.0.0-SNAPSHOT</truck.topology.domain.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>2.5.6</spring.version>
+        <junit.version>4.5</junit.version>
+        <mail.version>1.4.3</mail.version>
+        <log4j.version>1.2.17</log4j.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>clojars.org</id>
+            <url>http://clojars.org/repo</url>
+        </repository>
+        <!--
+        <repository>
+            <id>github-releases</id>
+            <url>http://oss.sonatype.org/content/repositories/github-releases/</url>
+        </repository>
+        -->
+        <repository>
+            <id>hortonworks</id>
+            <url>http://nexus-private.hortonworks.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>xalan</groupId>
+            <artifactId>xalan</artifactId>
+            <version>2.7.1</version>
+        </dependency>
+
+
+
+    <dependency>
+       <groupId>org.apache.hbase</groupId>
+       <artifactId>hbase-client</artifactId>
+       <version>1.1.2</version>
+     </dependency>
+     <dependency>
+       <groupId>org.apache.phoenix</groupId>
+       <artifactId>phoenix-server-client</artifactId>
+       <version>4.7.0-HBase-1.1</version>
+     </dependency>
+     <dependency>
+       <groupId>org.apache.phoenix</groupId>
+       <artifactId>phoenix-core</artifactId>
+       <version>4.7.0-HBase-1.1</version>
+     </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hadoop.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>log4j-over-slf4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- HBase Dependcies -->
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>${hbase.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>log4j-over-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>1.4</version>
+                <configuration>
+                    <createDependencyReducedPom>true</createDependencyReducedPom>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass></mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

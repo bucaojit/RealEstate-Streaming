@@ -64,7 +64,19 @@ private static final Logger LOG = Logger.getLogger(InsertBolt.class);
                    + prop.getDescription() + "','" 
                    + prop.getPubDate() + "','" 
                    + prop.getThumbnail()+ "')";
-		   LOG.info("INSERTING: " + insertStatement);
+		   LOG.debug("INSERTING: " + insertStatement);
+		   insert.execute(insertStatement);
+		   
+	   } catch (SQLException sqle) {
+		   sqle.printStackTrace();
+	   }
+
+	   try {
+		   Statement insert = conn.createStatement();
+		   String insertStatement = "UPSERT INTO PROPERTIES_TOPROCESS VALUES ( '" 
+		           + prop.getTitle() + "','" 
+                   + prop.getPubDate() + "')";
+		   LOG.debug("INSERTING: " + insertStatement);
 		   insert.execute(insertStatement);
 		   
 	   } catch (SQLException sqle) {
@@ -98,5 +110,8 @@ private static final Logger LOG = Logger.getLogger(InsertBolt.class);
     		                                                    "DESCRIPTION VARCHAR, " +
                                                                 "PUBDATE VARCHAR, " +
     		                                                    "THUMBNAIL VARCHAR)");
+
+       statement.execute("CREATE TABLE IF NOT EXISTS PROPERTIES_TOPROCESS (TITLE VARCHAR not null primary key," +
+                                                                "PUBDATE VARCHAR, " );
    }
 }
