@@ -112,6 +112,6 @@ private static final Logger LOG = Logger.getLogger(InsertBolt.class);
     		                                                    "THUMBNAIL VARCHAR)");
 
        statement.execute("CREATE TABLE IF NOT EXISTS PROPERTIES_TOPROCESS (TITLE VARCHAR not null primary key," +
-                                                                "PUBDATE VARCHAR, " );
+                                                                "PUBDATE VARCHAR)" );
    }
 }

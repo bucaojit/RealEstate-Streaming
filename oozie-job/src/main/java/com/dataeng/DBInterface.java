@@ -26,7 +26,6 @@ public class DBInterface {
 		phxZKHostname = hbaseConfig.get(HConstants.ZOOKEEPER_QUORUM);
 		phxZKPort = hbaseConfig.getInt(HConstants.ZOOKEEPER_CLIENT_PORT, HConstants.DEFAULT_ZOOKEPER_CLIENT_PORT);
 		hbaseRootDir = hbaseConfig.get(HConstants.ZOOKEEPER_ZNODE_PARENT);
-		zillowRESTCode = hbaseConfig.get(zillowRESTProperty);
 		
 		dbConn = getConnection();
 	}
@@ -38,12 +37,12 @@ public class DBInterface {
                                            hbaseRootDir);
     }
     
-    private ResultSet executeSelectStatement(String sql) throws SQLException {
+    public ResultSet executeSelectStatement(String sql) throws SQLException {
         Statement statement = dbConn.createStatement();
         return statement.executeQuery(sql);
     }
     
-    private boolean executeInsertStatement(String sql) throws SQLException {
+    public boolean executeInsertStatement(String sql) throws SQLException {
         Statement statement = dbConn.createStatement();
         return statement.execute(sql);
     }
